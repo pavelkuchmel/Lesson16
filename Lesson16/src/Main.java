@@ -33,13 +33,17 @@ public class Main {
 
         Matrix m3 = new Matrix(m1.mult(3));
         m1.showArray();
-        m3.showArray();*/
+        m3.showArray();
+        System.out.println(m3.toString());*/
 
         ProgReader journalReader = new ProgReader();
         Reader r1 = new Reader("Павел", "Кучмель", "Викторович", 1, "Java", new BornDate(15, 02, 1993), 375257947362L);
+        Reader r2 = new Reader("Павел", "Никифоров", "Преподовательвич", 2, "Java", new BornDate(10, 06, 1880), 3752566677766L);
         journalReader.addReader(r1);
+        journalReader.addReader(r2);
         //System.out.println(journalReader.readers.get(0));
-        //System.out.println(journalReader.getReader(375257947362L));
-        System.out.println(journalReader.getReader("Кучмель"));
+        //System.out.println(journalReader.getReader("Никифоров"));
+        //System.out.println(journalReader.getReader("Java"));
+        r1.takeBook(new Book("Война и мир", "Лев Толстой", "Роман"));
     }
 }

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -24,7 +25,17 @@ public class Matrix {
         return "Matrix: " +
                 "\nКоличество строк: " + string +
                 "\nКоличество столбцов: " + column +
-                "\nМассив: " + Arrays.toString(array);
+                "\nМассив: " + toStringMatrix(array);
+    }
+
+    public String toStringMatrix(int[][] array){
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        for (int i = 0; i < array.length; i++){
+            for (int j = 0; j < array[i].length; j++){
+                arr.add(array[i][j]);
+            }
+        }
+        return arr.toString();
     }
 
     public int getString() { return string; }
