@@ -61,7 +61,10 @@ public class Phone {
     public long getNumber(){
         return number;
     }
-    /*public void sendMessage(long numberRecipient){
-        System.out.println("Номер телефона: "+numberRecipient);
-    }*/
+    public void sendMessage(long ...numberRecipient){
+        System.out.println("Номера телефонов на которые необходимо отправить сообщение: ");
+        for (int i = 0; i < numberRecipient.length; i++){
+            System.out.println(i+1+". "+numberRecipient[i]);
+        }
+    }
 }
