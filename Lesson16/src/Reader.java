@@ -88,21 +88,36 @@ public class Reader {
     }
 
     public void takeBook(){}
-    public void takeBook(int qnt){ System.out.println("Количество книг которые взялл" + getName() + getSourName() + getMiddleName() + ": " + qnt); }
+    public void takeBook(int qnt){ System.out.println("Количество книг которые взялл" + getSourName() + ' ' + getName().charAt(0) + '.' + getMiddleName().charAt(0) + '.' + ' ' + ": " + qnt); }
     public void takeBook(String ...bookName){
-        System.out.print(getName() + " взял книги: ");
+        System.out.print(getSourName() + ' ' + getName().charAt(0) + '.'+ getMiddleName().charAt(0) + '.' + ' ' + " взял книги: ");
         for (int i = 0; i < bookName.length; i++) {
             if (i == bookName.length-1) System.out.println(bookName[i]+'.');
             else System.out.print(bookName[i]+", ");
         }
     }
     public void takeBook(Book ...bookType){
-        System.out.print(getName() + " взял книги: ");
+        System.out.print(getSourName() + ' ' + getName().charAt(0) + '.' + getMiddleName().charAt(0) + '.' + ' ' + " взял книги: ");
         for (int i = 0; i < bookType.length; i++) {
-            if (i == bookType.length-1) System.out.print(bookType[i]+".");
-            else System.out.print(bookType[i]+", ");
+            if (i == bookType.length-1) System.out.print(bookType[i].getType()+".");
+            else System.out.print(bookType[i].getType()+", ");
         }
     }
     public void returnBook(){}
+    public void returnBook(int qnt){ System.out.println(getSourName() + ' ' + getName().charAt(0) + '.' + getMiddleName().charAt(0) + '.' + ' ' + "Вернул: " + qnt); }
+    public void returnBook(String ...bookName){
+        System.out.print(getSourName() + ' ' + ' ' + getName().charAt(0) + '.' + getMiddleName().charAt(0) + '.' + ' ' + " вернул книги: ");
+        for (int i = 0; i < bookName.length; i++) {
+            if (i == bookName.length-1) System.out.println(bookName[i]+'.');
+            else System.out.print(bookName[i]+", ");
+        }
+    }
+    public void returnBook(Book ...bookType){
+        System.out.print(getSourName() + ' ' + getName().charAt(0) + '.' + getMiddleName().charAt(0) + '.' + ' ' + " вернул книги: ");
+        for (int i = 0; i < bookType.length; i++) {
+            if (i == bookType.length-1) System.out.print(bookType[i].getType()+".");
+            else System.out.print(bookType[i].getType()+", ");
+        }
+    }
 
 }

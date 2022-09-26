@@ -42,8 +42,9 @@ public class Main {
         journalReader.addReader(r1);
         journalReader.addReader(r2);
         //System.out.println(journalReader.readers.get(0));
-        //System.out.println(journalReader.getReader("Никифоров"));
-        //System.out.println(journalReader.getReader("Java"));
-        r1.takeBook(new Book("Война и мир", "Лев Толстой", "Роман"));
+        //System.out.println(journalReader.findReader("Никифоров"));
+        journalReader.findReader("Java");
+        //r1.takeBook(new Book("Война и мир", "Лев Толстой", "Роман"), new Book("Гарри Поттер", "Джоан Роулинг", "Фэнтези"), new Book("Философия Java", "Брюс Эккель", "Учебник"));
+
     }
 }
